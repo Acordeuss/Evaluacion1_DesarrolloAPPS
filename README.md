@@ -27,7 +27,11 @@ stateDiagram-v2
     }
     
     Historial --> Dashboard: Volver
-    PreChequeo --> AST --> ChecklistDPR24 --> RegistroSalud --> Evidencias --> Dictamen
+    PreChequeo --> AST
+    AST --> ChecklistDPR24
+    ChecklistDPR24 --> RegistroSalud
+    RegistroSalud --> Evidencias
+    Evidencias --> Dictamen
     
     state Dictamen {
         [*] --> Algoritmo
